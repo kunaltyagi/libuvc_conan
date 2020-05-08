@@ -8,8 +8,8 @@ conan new libuvc/0.1@kunaltyagi/master -t
 ## Setup and Build
 ```
 conan source .
-conan build .
 conan install . libuvc/0.1@kunaltyagi/master
+conan build .
 ```
 
 ## Test and Package
