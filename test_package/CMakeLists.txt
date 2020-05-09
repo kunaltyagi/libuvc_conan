@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 2.8.12)
 project(PackageTest CXX)
 
+set(CMAKE_VERBOSE_MAKEFILE TRUE)
+
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
 add_executable(example example.cpp)
 target_link_libraries(example ${CONAN_LIBS})
+set_property(TARGET example PROPERTY CXX_STANDARD 14)
 
 # CTest is a testing tool that can be used to test your project.
 # enable_testing()
